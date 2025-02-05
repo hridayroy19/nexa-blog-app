@@ -6,7 +6,6 @@ export const store = configureStore({
         // Add the generated reducer as a specific top-level slice
         [baseApi.reducerPath]: baseApi.reducer,
     },
-    // Adding the api middleware enables caching, invalidation, polling,
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware().concat(baseApi.middleware),
 })
